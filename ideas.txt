@@ -1,0 +1,20 @@
+NCURSES
+
+use getch();
+    to grab user input
+
+use move(x,y);
+    to reset cursor position to the beggining of the line once the screen is drawn
+
+use curs_set(0);
+    to make the cursor invisble
+
+use clear();
+    to clear the screen every time it is updated
+
+use keypad(stdscr, TRUE);
+    to enable cursor and function keys
+
+use noecho();
+    don't display characters typed while we do getch()
+g++ -std=c++14 -Wall ptype.cpp Game.cpp Area.cpp Player.cpp  -lncurses
